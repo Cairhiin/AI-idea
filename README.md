@@ -4,7 +4,7 @@ iFootbalManager
 
 ## Summary
 
-Manage a team on a budget! Find players that are outperforming their market value, maximize player quality within a given budget. Not every team is Manchester City and can afford high profile players like Kevin de Bruijne but every team can purchase the next best thing, or try to!
+Manage a team on a budget! Find players that are outperforming their market value, maximize player quality within a given budget. Not every team is Manchester City and can afford high profile players.
 
 Building AI course project
 
