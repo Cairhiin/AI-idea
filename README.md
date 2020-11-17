@@ -30,7 +30,7 @@ def main():
   
   # suppose we have the data in a text file with the player stats where first column is the player name, 
   # and the last column is their real market price (based on recent transfer), and the columns in between are player statistics 
-  like pass% shot% minutes played, etc, and the player market value in last column
+  # like pass% shot% minutes played, etc, and the player market value in last column
   train_data = np.genfromtxt(StringIO(train_string), skip_header=1)
     
   # split the data into coefficients (x) and market value (y) 
