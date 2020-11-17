@@ -4,7 +4,7 @@ Building AI course project
 
 ## Summary
 
-Manage a team on a budget! Find players that are outperforming their market value, maximize player quality within a given budget. Not every team is Manchester City and can afford high profile players.
+Manage a team on a budget! Find players that are outperforming their market value, maximize player quality within a given budget. 
 
 ## Background
 
