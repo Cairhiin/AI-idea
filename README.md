@@ -54,8 +54,9 @@ def main():
   for i in range(len(player_predicted_values):
     current_player = { name: player_name[i], value_gain: y_train[i] - player_predicted_values[i] }
     relative_market_value.append(current_player)
-    
-  # algorythm to maximize the budget and amount of players
+  
+  print(relative_market_value)
+  # algorythm to maximize the budget and amount of players to be implemented
     
 main()
 ```
