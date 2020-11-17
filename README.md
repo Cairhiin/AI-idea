@@ -8,8 +8,9 @@ Manage a team on a budget! Find players that are outperforming their market valu
 
 ## Background
 
-* Teams function under a limited budget but still want to improve and be competitive with the money they have. How do they decide to buy new players? Scouting multiple players across multiple leagues is expensive and requires on the quality of the scout. Developing your own players is also a large investment that requires an expensive infrastructure. 
-
+* Teams function under a limited budget but still want to improve and be competitive with the money they have. How do they decide to buy new players? 
+* Scouting multiple players across multiple leagues is expensive and relies on the quality of the scout. 
+* Developing your own players is also a large investment that requires an expensive infrastructure. 
 
 ## How is it used?
 
@@ -70,9 +71,12 @@ The AI can predict which player is worth more than their market value but it can
 
 ## What next?
 
-Determine the likelihood of a player injury in each next game based on player load, weather, field quality, average distance per game, etc. Determine best substitutes for a given game depending on the score, player recent performance (ie how is a player trending), weather, etc. Add climate to player evaluation: some players perform better in cold or wet weather than others. Some players perform better in extreme heat.
+* Determine the likelihood of a player injury in each next game based on player load, weather, field quality, average distance per game, etc. 
+* Determine best substitutes for a given game depending on the score, player recent performance (ie how is a player trending), weather, etc. Add climate to player evaluation: some players perform better in cold or wet weather than others. Some players perform better in extreme heat.
+* Determine whether investments into own youth players is worth the cost of the investment. Prediction based on player progress vs money spent. 
+* Player qualification system using logistic regression; player categories can be: prospect, value player, star, sale potential
 
-Required capabilities: Accessing an api to fetch weather data, player data, market data. 
+Required capabilities: Accessing an api to fetch weather data, player data, market data. Developing a neural network to map players to categories. 
 
 ## Acknowledgments
 
