@@ -36,7 +36,6 @@ def main():
   # split the data into coefficients (x) and market value (y) 
   player_train_value = train_data[:, -1]
   player_train_coefficents = train_data[:, 1:-1]
-  player_name = train_data[1]
   
   # fit a linear regression model to the data and get the coefficients
   c = np.linalg.lstsq(player_train_coefficents, player_train_value)[0]
@@ -44,7 +43,8 @@ def main():
   # Test data has similar data format compared to train data
   player_data = np.genfromtxt(StringIO(test_string), skip_header=1)
   player_coef_data = player_data[:, 1:-1]
-
+  player_name = player_data[:, 0]
+  
   # save the player data and print out the predicted market values for the players in the data set
   player_predicted_values = (player_coef_data @ c)
   print(player_predicted_values)
