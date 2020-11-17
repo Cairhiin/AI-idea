@@ -28,11 +28,12 @@ def main():
   # example number of players to buy
   players = 2
   
-  # suppose we have the train data in a text file with the player stats as coefficient in the first n columns 
+  # suppose we have the data in a text file with the player stats where first column is player name, 
+  # and last column is real market price, and the columns in between are player statistics like pass% shot% minutes played, etc,
   # and the player market value in last column
   train_data = np.genfromtxt(StringIO(train_string), skip_header=1)
     
-  # split the data into coefficients (x) and market value (y) where first column is player name, and last column is real market price
+  # split the data into coefficients (x) and market value (y) 
   player_train_value = train_data[:, -1]
   player_train_coefficents = train_data[:, 1:-1]
   player_name = train_data[1]
