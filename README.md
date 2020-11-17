@@ -1,4 +1,4 @@
-# iFootbalManager
+# iFootballManager
 
 Building AI course project
 
@@ -28,9 +28,9 @@ def main():
   # example number of players to buy
   players = 2
   
-  # suppose we have the data in a text file with the player stats where first column is player name, 
-  # and last column is real market price, and the columns in between are player statistics like pass% shot% minutes played, etc,
-  # and the player market value in last column
+  # suppose we have the data in a text file with the player stats where first column is the player name, 
+  # and the last column is their real market price (based on recent transfer), and the columns in between are player statistics 
+  like pass% shot% minutes played, etc, and the player market value in last column
   train_data = np.genfromtxt(StringIO(train_string), skip_header=1)
     
   # split the data into coefficients (x) and market value (y) 
@@ -41,7 +41,7 @@ def main():
   # fit a linear regression model to the data and get the coefficients
   c = np.linalg.lstsq(player_train_coefficents, player_train_value)[0]
 
-  # Testa data has similar data format compared to train data
+  # Test data has similar data format compared to train data
   player_data = np.genfromtxt(StringIO(test_string), skip_header=1)
   player_coef_data = player_data[:, 1:-1]
 
