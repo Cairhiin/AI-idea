@@ -33,26 +33,30 @@ def main():
   # and the player market value in last column
   train_data = np.genfromtxt(StringIO(train_string), skip_header=1)
     
-  # split the data into coefficients (x) and market value (y)
-  y_train = train_data[:, -1]
-  x_train = train_data[:, :-1]
-
+  # split the data into coefficients (x) and market value (y) where first column is player name, and last column is real market price
+  player_train_value = train_data[:, -1]
+  player_train_coefficents = train_data[:, 1:-1]
+  player_name = train_data[1]
+  
   # fit a linear regression model to the data and get the coefficients
-  c = np.linalg.lstsq(x_train, y_train)[0]
+  c = np.linalg.lstsq(player_train_coefficents, player_train_value)[0]
 
-  # Similar data format compared to train data
-  x_data = np.genfromtxt(StringIO(test_string), skip_header=1)
-  x_data = x_test[:, :-1]
+  # Testa data has similar data format compared to train data
+  player_data = np.genfromtxt(StringIO(test_string), skip_header=1)
+  player_coef_data = player_data[:, 1:-1]
 
   # save the player data and print out the predicted market values for the players in the data set
-  player_predicted_values = (x_data @ c)
+  player_predicted_values = (player_coef_data @ c)
   print(player_predicted_values)
   
   # optimize the budget and players to buy
-  # first create a list of players by market value vs current market value
-  
+  # first create a list of players by market value vs current market value 
   relative_market_value = []
   for i in range(len(player_predicted_values):
+    current_player = { name: player_name[i], value_gain: y_train[i] - player_predicted_values[i] }
+    relative_market_value.append(current_player)
+    
+  # algorythm to maximize the budget and amount of players
     
 main()
 ```
