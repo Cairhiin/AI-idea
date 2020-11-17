@@ -58,7 +58,8 @@ def main():
     relative_market_value.append(current_player)
   
   print(relative_market_value)
-  # algorythm to maximize the budget and amount of players to be implemented
+  
+  # algorythm to maximize the budget and amount of players to be implemented below
     
 main()
 ```
